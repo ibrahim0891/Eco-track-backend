@@ -1,10 +1,11 @@
 import { Router } from "express";
 import challengesController from "../controllers/challenges.controller.js";
+import verifyUser from "../Interceptors/verifyUser.js";
 
 
 const challengesRouter = Router()
 
-challengesRouter.get('/', challengesController.getChallagens)
+challengesRouter.get('/',verifyUser ,  challengesController.getChallagens)
 challengesRouter.get('/:id', challengesController.getChallengeById)
 
 challengesRouter.post('/', challengesController.createChallenge)

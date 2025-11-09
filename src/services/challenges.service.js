@@ -14,7 +14,7 @@ class Challenges {
 
     async getChallenges(filters) {
         try {
-            const challenges = await this.challenges.find(filters).toArray()
+            const challenges = await this.challenges().find(filters).toArray()
             return challenges
         } catch (error) {
             throwError(error, error.message)
@@ -32,7 +32,7 @@ class Challenges {
 
     async joinChallenges(userId, challengeId) {
         try {
-            const challengeJoinResult = await this.challenges().updateOne({ _id: challengeId }, { $push: { joinedUsers: userId } })
+            const challengeJoinResult = await this.challenges().updateOne({ _id: challengeId }, { $push: { joinedUsers: userId }, $inc: { participants: 1 } })
             const userChallenge = {
                 "_id": ObjectId,
                 "userId": userId , 

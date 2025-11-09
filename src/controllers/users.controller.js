@@ -1,5 +1,5 @@
-import userServices from "../services/user.service";
-import { sendResponse } from "../utils/sendResponse";
+import userServices from "../services/user.service.js";
+import { sendResponse } from "../utils/sendResponse.js";
 
 
 
