@@ -1,6 +1,6 @@
-import { Router } from "express";
-import challengesController from "../controllers/challenges.controller.js";
-import verifyUser from "../Interceptors/verifyUser.js";
+import { Router } from "express";  
+import challengesController from "./challenges.controller.js";
+import verifyUser from "../../Interceptors/verifyUser.js";
 
 
 const challengesRouter = Router()
@@ -14,4 +14,4 @@ challengesRouter.patch('/:id', challengesController.updateChallange)
 challengesRouter.delete('/:id', challengesController.deleteChallenge)
 challengesRouter.post('/join/:id', challengesController.joinChallenges)
 
-export { challengesRouter }
+export default challengesRouter 

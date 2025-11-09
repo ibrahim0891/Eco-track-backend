@@ -1,4 +1,5 @@
 import { Router } from "express";
+import tipsController from "./tips.controller.js";
 
 
 const tipsRouter = Router(); 

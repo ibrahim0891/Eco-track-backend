@@ -1,5 +1,7 @@
-import { challengesService } from "../services/challenges.service.js"
-import { sendResponse } from "../utils/sendResponse.js";
+import { sendResponse } from "../../utils/sendResponse.js";
+import { challengesService } from "./challenges.service.js";
+
+ 
 
 
 class ChallangesControl {

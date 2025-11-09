@@ -1,5 +1,6 @@
-import { sendResponse } from "../utils/sendResponse";
+import { sendResponse } from "../../utils/sendResponse.js";
 
+ 
 
 class TipsController {
     async createTip(req, res) {

@@ -1,5 +1,7 @@
-import { db } from "../database.js";
-import { throwError } from "../utils/throwError.js";
+import { db } from "../../database.js"
+import { throwError } from "../../utils/throwError.js"
+
+ 
 
 
 class Challenges {

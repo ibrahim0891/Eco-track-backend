@@ -1,7 +1,5 @@
-import userServices from "../services/user.service.js";
-import { sendResponse } from "../utils/sendResponse.js";
-
-
+import { sendResponse } from "../../utils/sendResponse.js";
+import userServices from "./user.service.js";
 
 class UserController {
     async createUser(req, res) {

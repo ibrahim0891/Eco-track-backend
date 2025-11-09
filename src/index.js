@@ -2,9 +2,10 @@ import { config } from './config.js';
 import express from 'express'
 import cors from 'cors' 
 import { connectDatabase , db  } from './database.js'
-import { challengesRouter } from './routers/challenges.router.js';
-import userRouter from './routers/user.router.js';
-import tipsRouter from './routers/tips.router.js';
+import challengesRouter from './features/challenges/challenges.router.js';
+import userRouter from './features/users/user.router.js';
+import tipsRouter from './features/tips/tips.router.js';
+ 
 
 const app = express()
 const { port } = config
